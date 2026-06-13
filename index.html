@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <!-- iOS PWA: add to Home Screen for true fullscreen (no Safari chrome) -->
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="apple-mobile-web-app-title" content="Qanvast Event"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <title>Qanvast Event Platform</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjMwIj4KICA8cGF0aCBmaWxsPSIjNDNCREFCIiBkPSJNMTY3LjM1Miw3NC4xNjNjLTExLjA5Ni0xNC4xLTIyLjE5Mi0yOC4yMy0zMy4yNjMtNDIuMzQ2Yy0wLjU2My0wLjY2LTEuMjE2LTEuMDgtMS45MTktMS4yNHYtMC4wMzNjLTE4LjA4NC01LjAxMS0zNi4zMjUtOS45NzQtNTQuNDM0LTE1LjAwMWMtMS40MjEtMC40MzUtMy40NzktMC4wNjQtNC40NTgsMS4xNkM1NC40MjUsMzkuOTA2LDM1LjU5Nyw2My4xMjYsMTYuNzY5LDg2LjM2Yy0xLjEyNiwxLjQwMi0yLjI5NCwyLjgwNS0zLjQxMyw0LjIyM0MxMi41MTUsOTEuMzA4LDEyLDkyLjQwMywxMiw5My44MDZ2ODEuMjExbDAsMGMwLDAuMDk2LDAsMC4xNiwwLDAuMjU4Yy0wLjAyNCwxLjM4NSwwLjY1MywyLjc4NywyLjI4NiwzLjY4OWMxOC41MDEsMTAuMTE5LDM3LjAyOCwyMC4yMzgsNTUuNTUzLDMwLjM1N2MwLjMyNywwLjE2MSwwLjYzNywwLjI3MywwLjk2NCwwLjM3MWMxLjA5NCwwLjM4NywyLjM3NiwwLjMzOCwzLjY5LTAuMzcxYzI2LjYwOS0xNS4wMTgsNTMuMjM0LTI5Ljk4Niw3OS44NjgtNDQuOTczYzQuMjUzLTIuNDMzLDguNTQ4LTQuODE3LDEyLjgwMi03LjI1YzEuNDI5LTAuODA3LDIuMjg2LTIuMzIsMi4yODYtMy45MTZ2LTQxLjk3NVY4NS4zNDZ2LTYuMzgxQzE2OS40NTEsNzcuMDQ4LDE2OC41Miw3NS42NDYsMTY3LjM1Miw3NC4xNjMgTTc2LjM2NCwyNy4zN2MwLjYyOC0wLjc1OCwxLjIzMy0xLjUxNSwxLjg0NS0yLjI1NmMxNS4wNCw0LjE3NCwzMC4wMzgsOC4zNjMsNDUuMDg2LDEyLjU1M2MtMTYuNDAzLDIyLjk5My0zMi43OTgsNDUuOTU1LTQ5LjE3Nyw2OC45MTZjLTEuMTkyLDEuNjYtMi4zODQsMy4zMzYtMy41NzYsNC45OTZjLTE1LjUxMy02LjU0Mi0zMS4wNDItMTMuMDY4LTQ2LjU4LTE5LjU5NEM0MS40MzUsNzAuNDI1LDU4LjkwOCw0OC44OTcsNzYuMzY0LDI3LjM3IE0yMS4yMjcsMTAwLjY1M2MxNS40NCw2LjQ5NCwzMC44ODgsMTMuMDA0LDQ2LjMyNywxOS40ODF2OC40MTJ2NTUuOTEydjEzLjE5N2MtMTUuNDM5LTguNDQzLTMwLjg4Ny0xNi44NzEtNDYuMzI3LTI1LjMxNFYxMDAuNjUzeiBNODIuNjY3LDE5NC4yMjRjLTEuOTg0LDEuMDk2LTMuOTI3LDIuMjA3LTUuODg3LDMuMzE4di03OC42NjR2LTAuMzIyYzE3LjM1OC0yNC4yODQsMzQuNzQxLTQ4LjYxNSw1Mi4xLTcyLjk0NmMwLjcxOS0wLjk2NywxLjQyMS0xLjk2NiwyLjEyMy0yLjk4YzkuNzQxLDEyLjQwNiwxOS40ODEsMjQuNzk4LDI5LjI0NiwzNy4xODl2NzAuNzIxQzEzNC4zNjYsMTY1LjEwNywxMDguNTI1LDE3OS42NTgsODIuNjY3LDE5NC4yMjQiLz4KPC9zdmc+">
-  <style>*,*::before,*::after{box-sizing:border-box}html,body,#root{margin:0;padding:0}html{height:100%;background:#0F0F0E;color-scheme:dark}body{height:100%;background:#0F0F0E;font-family:'DM Sans',system-ui,sans-serif;color-scheme:dark}#root{height:100%}:root{color-scheme:dark}::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-track,::-webkit-scrollbar-track-piece,::-webkit-scrollbar-corner{background:#0F0F0E}::-webkit-scrollbar-thumb{background:#3E3E3C;border-radius:3px;-webkit-border-radius:3px;min-height:40px;min-width:40px;border:1px solid #0F0F0E}@media(hover:hover){::-webkit-scrollbar-thumb:hover{background:#555550}}*{scrollbar-width:thin;scrollbar-color:#3E3E3C #0F0F0E}input,textarea,select,button{font-family:'DM Sans',system-ui,sans-serif}input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus{-webkit-box-shadow:0 0 0 1000px #111110 inset!important;-webkit-text-fill-color:#EDEDE9!important;transition:background-color 5000s ease-in-out 0s}
+  <style>*,*::before,*::after{box-sizing:border-box}html,body,#root{margin:0;padding:0}html{height:100%;height:100dvh;background:#0F0F0E;color-scheme:dark;overflow:hidden;position:fixed;width:100%}body{height:100%;height:100dvh;background:#0F0F0E;font-family:'DM Sans',system-ui,sans-serif;color-scheme:dark;overflow:hidden;position:fixed;width:100%;-webkit-overflow-scrolling:touch}#root{height:100%;height:100dvh;overflow:hidden}:root{color-scheme:dark}::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-track,::-webkit-scrollbar-track-piece,::-webkit-scrollbar-corner{background:#0F0F0E}::-webkit-scrollbar-thumb{background:#3E3E3C;border-radius:3px;-webkit-border-radius:3px;min-height:40px;min-width:40px;border:1px solid #0F0F0E}@media(hover:hover){::-webkit-scrollbar-thumb:hover{background:#555550}}*{scrollbar-width:thin;scrollbar-color:#3E3E3C #0F0F0E}input,textarea,select,button{font-family:'DM Sans',system-ui,sans-serif}input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus{-webkit-box-shadow:0 0 0 1000px #111110 inset!important;-webkit-text-fill-color:#EDEDE9!important;transition:background-color 5000s ease-in-out 0s}
         @keyframes toastUp   { from { opacity:0; transform:translateY(-120%) } to { opacity:1; transform:translateY(0) } }
         @keyframes toastDown { from { opacity:1; transform:translateY(0) } to { opacity:0; transform:translateY(-120%) } }
         @keyframes blink{0%,100%{opacity:1}50%{opacity:0.2}}</style>
@@ -19,6 +24,41 @@
     var merged = Array.from(new Set(FIRM_NAMES.concat(existing))).slice(0, 100);
     localStorage.setItem("qanvast_studio_names", JSON.stringify(merged));
   } catch (e) {}
+})();
+</script>
+<script>
+// iOS doesn't support requestFullscreen — patch it to show an Add to Home Screen prompt
+(function() {
+  var isIOS = /iP(ad|hone|od)/.test(navigator.userAgent) && !window.MSStream;
+  var isStandalone = window.navigator.standalone === true;
+  if (!isIOS) return;
+  document.documentElement.requestFullscreen = function() {
+    if (isStandalone) return Promise.resolve();
+    var existing = document.getElementById('__ios-fs-tip');
+    if (existing) { existing.remove(); return Promise.resolve(); }
+    var tip = document.createElement('div');
+    tip.id = '__ios-fs-tip';
+    tip.style.cssText = [
+      'position:fixed','bottom:24px','left:50%','transform:translateX(-50%)',
+      'background:#1C1C1A','color:#EDEDE9','font-family:DM Sans,system-ui,sans-serif',
+      'font-size:14px','line-height:1.5','padding:14px 18px','border-radius:8px',
+      'border:1px solid #3E3E3C','z-index:99999','max-width:320px','text-align:center',
+      'box-shadow:0 8px 32px rgba(0,0,0,0.6)'
+    ].join(';');
+    tip.innerHTML = '<strong style="display:block;margin-bottom:6px">Full-screen on iPad</strong>' +
+      'Tap <strong>Share</strong> (&#x25A1;&uarr;) → <strong>Add to Home Screen</strong>. ' +
+      'Opening from your Home Screen removes Safari\'s chrome entirely.' +
+      '<br><button onclick="document.getElementById(\'__ios-fs-tip\').remove()" ' +
+      'style="margin-top:10px;padding:6px 16px;background:#3E3E3C;color:#EDEDE9;border:none;' +
+      'border-radius:4px;font-size:13px;cursor:pointer">Got it</button>';
+    document.body.appendChild(tip);
+    setTimeout(function() { if (tip.parentNode) tip.remove(); }, 8000);
+    return Promise.resolve();
+  };
+  document.exitFullscreen = function() { return Promise.resolve(); };
+  Object.defineProperty(document, 'fullscreenElement', { get: function() {
+    return isStandalone ? document.documentElement : null;
+  }, configurable: true});
 })();
 </script></head><body><div id="root"></div>
 <script>(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))r(o);new MutationObserver(o=>{for(const i of o)if(i.type==="childList")for(const s of i.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&r(s)}).observe(document,{childList:!0,subtree:!0});function n(o){const i={};return o.integrity&&(i.integrity=o.integrity),o.referrerPolicy&&(i.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?i.credentials="include":o.crossOrigin==="anonymous"?i.credentials="omit":i.credentials="same-origin",i}function r(o){if(o.ep)return;o.ep=!0;const i=n(o);fetch(o.href,i)}})();var ad={exports:{}},Tl={},ud={exports:{}},se={};/**
